@@ -65,9 +65,10 @@ export function OrderTableFilters() {
   }
 
   function handleClearFilters() {
+    console.log('Entrei')
     setSearchParams((state) => {
       state.delete('orderId')
-      state.delete('custoemrName')
+      state.delete('customerName')
       state.delete('status')
       state.set('page', '1')
       return state
@@ -131,7 +132,7 @@ export function OrderTableFilters() {
         type="button"
         variant="outline"
         size="xs"
-        onClick={() => handleClearFilters}
+        onClick={() => handleClearFilters()}
       >
         <X className="mr-2 h-4 w-4" />
         Remover filtros
