@@ -9,7 +9,6 @@ export function MonthOrdersAmountCard() {
     queryFn: getMonthOrdersAmount,
     queryKey: ['metrics', 'month-orders-amount'],
   })
-
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -30,14 +29,14 @@ export function MonthOrdersAmountCard() {
                   <span className="text-rose-500 dark:text-emerald-400">
                     +{monthOrdersAmount.diffFromLastMonth}%{' '}
                   </span>
-                  em relação a ontem
+                  em relação ao mês passado
                 </>
               ) : (
                 <>
                   <span className="text-rose-500 dark:text-rose-400">
                     {monthOrdersAmount.diffFromLastMonth}%{' '}
                   </span>
-                  em relação a ontem
+                  em relação ao mês passado
                 </>
               )}
             </p>

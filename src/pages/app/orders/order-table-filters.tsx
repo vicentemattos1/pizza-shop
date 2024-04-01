@@ -65,7 +65,6 @@ export function OrderTableFilters() {
   }
 
   function handleClearFilters() {
-    console.log('Entrei')
     setSearchParams((state) => {
       state.delete('orderId')
       state.delete('customerName')
